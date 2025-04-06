@@ -1,120 +1,243 @@
+/* Reset básico */
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-  }
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Fuente y color de fondo global */
+body {
+  font-family: 'Inter', sans-serif;
+  line-height: 1.6;
+  background-color: #F8F9FA;
+  color: #333;
+}
+
+/* Contenedor principal */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 64px;
+}
+
+/* Header */
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #F8F9FA;
+  padding: 10px 64px;
+  color: #E3D8F5;
+}
+
+header .logo img {
+  height: auto;
+  max-height: 60px; /* Asegura que el logo no se deforme */
+}
+
+header nav ul {
+  list-style-type: none;
+  display: flex;
+  margin: 0;
+}
+
+header nav ul li {
+  margin-left: 20px;
+}
+
+header nav ul li a {
+  color: #E3D8F5;
+  text-decoration: none;
+  font-size: 1rem;
+  transition: color 0.3s ease, transform 0.3s ease;
+}
+
+header nav ul li a:hover {
+  color: #5227CC;
+  text-decoration: underline;
+  transform: scale(1.1); /* Efecto de hover para links */
+}
+
+/* Sección Hero */
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #F8F9FA;
+  padding: 50px 64px;
+  text-align: left;
+}
+
+.hero-content {
+  max-width: 600px;
+}
+
+.hero h1 {
+color: #000000;
+font-family: Inter;
+font-size: 32px;
+font-style: normal;
+font-weight: 200;
+line-height: normal;
+margin-bottom: 23px;
+}
+
+.hero h1 .name {
+  color: #5227CC;
+  font-family: Inter;
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+
+.hero p {
+color: #000000;
+font-family: Inter;
+font-size: 32px;
+font-style: normal;
+font-weight: 300;
+line-height: 52px; 
+margin-bottom: 49px;
+}
+
+.hero .cta-button {
+  background-color: #7749F8;
+  color: white;
+  padding: 12px 30px;
+  text-decoration: none;
+  border-radius: 5px;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+}
+
+.hero .cta-button:hover {
+  background-color: blueviolet;
+}
+
+.hero-image img {
   
-  body {
-    font-family: 'Inter', sans-serif;
-    line-height: 1.6;
-    background-color: #F8F9FA;
-    color: #333;
-  }
+  width: auto; 
+  height: auto;
+
   
-  /* Contenedor principal */
-  .container {
-    width: 100%;
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 20px;
-  }
-  
-  /* Header */
+}
+
+/* Estilos para dispositivos pequeños */
+@media (max-width: 768px) {
   header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    background-color: #F8F9FA;
-    padding: 10px 20px;
-    color: #E3D8F5;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 15px;
   }
-  
+
   header .logo img {
+    height: 40px; /* Ajuste el tamaño del logo en pantallas pequeñas */
+  }
+
+  header nav ul {
+    flex-direction: column;
+    margin-top: 10px;
+    width: 100%; /* Asegura que ocupe todo el ancho */
+  }
+
+  header nav ul li {
+    margin: 10px 0;
+  }
+
+  header nav ul li a {
+    font-size: 1.2rem;
+    padding: 10px 0; /* Añadido padding para que los enlaces sean más clicables */
+  }
+
+  .hero {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 30px 20px;
+  }
+
+  .hero-content {
+    max-width: 100%;
+    margin-bottom: 20px;
+  }
+
+  .hero h1 {
+    font-size: 2rem;
+  }
+
+  .hero p {
+    font-size: 1rem;
+  }
+
+  .hero .cta-button {
+    font-size: 0.9rem;
+    padding: 10px 20px;
+  }
+
+  .hero-image img {
+    width: 150px;
+    height: 150px;
+  }
+}
+
+/* Estilos para tabletas y pantallas más grandes */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .hero {
+    padding: 50px 40px;
+  }
+
+  .hero h1 {
+    font-size: 2.2rem;
+  }
+
+  .hero p {
+    font-size: 1.3rem;
+  }
+
+  .hero .cta-button {
+    font-size: 1.1rem;
+  }
+
+  .hero-image img {
+    width: 358px;
     height: auto;
   }
-  
-  header nav ul {
-    list-style-type: none;
-    display: flex;
+}
+
+/* Estilos para pantallas grandes de escritorio */
+@media (min-width: 1025px) {
+  header {
+    padding: 20px 64px;
   }
-  
+
+  header .logo img {
+    height: 60px;
+  }
+
   header nav ul li {
-    margin-left: 20px;
+    margin-left: 30px;
   }
-  
+
   header nav ul li a {
-    color: #E3D8F5;
-    text-decoration: none;
-    font-size: 1rem;
-    transition: color 0.3s ease;
+    font-size: 1.2rem;
   }
-  
-  header nav ul li a:hover {
-    color: #5227CC;
-    text-decoration: underline;
+
+  .hero h1 {
+    font-size: 3rem;
   }
-  
-  /* Estilos para dispositivos móviles */
-  @media (max-width: 768px) {
-    header {
-      flex-direction: column;
-      align-items: flex-start;
-      padding: 15px;
-    }
-  
-    header .logo img {
-      height: 40px; /* Ajuste el tamaño del logo en pantallas pequeñas */
-    }
-  
-    header nav ul {
-      flex-direction: column;
-      margin-top: 10px;
-    }
-  
-    header nav ul li {
-      margin: 10px 0;
-    }
-  
-    header nav ul li a {
-      font-size: 1.2rem;
-    }
+
+  .hero p {
+    font-size: 1.5rem;
   }
-  
-  /* Estilos para tabletas y pantallas más grandes */
-  @media (min-width: 769px) and (max-width: 1024px) {
-    header {
-      padding: 20px 40px;
-    }
-  
-    header .logo img {
-      height: 45px;
-    }
-  
-    header nav ul li {
-      margin-left: 25px;
-    }
-  
-    header nav ul li a {
-      font-size: 1.2rem;
-    }
+
+  .hero .cta-button {
+    font-size: 1.1rem;
   }
-  
-  /* Estilos para pantallas grandes de escritorio */
-  @media (min-width: 1025px) {
-    header {
-      padding: 20px 40px;
-    }
-  
-    header .logo img {
-      height: 60px;
-    }
-  
-    header nav ul li {
-      margin-left: 30px;
-    }
-  
-    header nav ul li a {
-      font-size: 1.2rem;
-    }
+
+  .hero-image img {
+    width: 558px;
+    height: auto;
   }
-  
+}
