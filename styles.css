@@ -5,9 +5,9 @@
   }
   
   body {
-    font-family: Arial, sans-serif;
+    font-family: 'Inter', sans-serif;
     line-height: 1.6;
-    background-color: #f4f4f4;
+    background-color: #F8F9FA;
     color: #333;
   }
   
@@ -19,86 +19,102 @@
     padding: 20px;
   }
   
-  /* Encabezado */
-  h1 {
-    text-align: center;
-    font-size: 2rem;
-    margin: 20px 0;
-  }
-
-  
-  /* Estilos para el diseño móvil */
-header {
-    background-color: #333;
-    color: white;
-    padding: 20px 0;
-    text-align: center;
+  /* Header */
+  header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #F8F9FA;
+    padding: 10px 20px;
+    color: #E3D8F5;
   }
   
-  /* Sección principal */
-  main {
-    padding: 20px;
-    background-color: #fff;
-    border-radius: 5px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  header .logo img {
+    height: auto;
   }
   
-  /* Estilos de los enlaces */
-  a {
-    color: #333;
+  header nav ul {
+    list-style-type: none;
+    display: flex;
+  }
+  
+  header nav ul li {
+    margin-left: 20px;
+  }
+  
+  header nav ul li a {
+    color: #E3D8F5;
     text-decoration: none;
+    font-size: 1rem;
     transition: color 0.3s ease;
   }
   
-  a:hover {
-    color: #007bff;
+  header nav ul li a:hover {
+    color: #5227CC;
+    text-decoration: underline;
   }
   
-  /* Estilos para dispositivos pequeños (pantallas móviles) */
-@media (max-width: 768px) {
-    h1 {
-      font-size: 1.5rem;
-    }
-  
-    .container {
-      padding: 10px;
-    }
-  
+  /* Estilos para dispositivos móviles */
+  @media (max-width: 768px) {
     header {
-      padding: 15px 0;
-    }
-  
-    main {
+      flex-direction: column;
+      align-items: flex-start;
       padding: 15px;
     }
+  
+    header .logo img {
+      height: 40px; /* Ajuste el tamaño del logo en pantallas pequeñas */
+    }
+  
+    header nav ul {
+      flex-direction: column;
+      margin-top: 10px;
+    }
+  
+    header nav ul li {
+      margin: 10px 0;
+    }
+  
+    header nav ul li a {
+      font-size: 1.2rem;
+    }
   }
-
-  /* Estilos para dispositivos medianos (tabletas y pantallas más grandes) */
-@media (min-width: 769px) and (max-width: 1024px) {
-    h1 {
-      font-size: 1.8rem;
+  
+  /* Estilos para tabletas y pantallas más grandes */
+  @media (min-width: 769px) and (max-width: 1024px) {
+    header {
+      padding: 20px 40px;
     }
   
-    .container {
-      padding: 20px;
+    header .logo img {
+      height: 45px;
     }
   
-    main {
-      padding: 20px;
+    header nav ul li {
+      margin-left: 25px;
+    }
+  
+    header nav ul li a {
+      font-size: 1.2rem;
     }
   }
   
-  /* Estilos para pantallas grandes (computadoras de escritorio) */
+  /* Estilos para pantallas grandes de escritorio */
   @media (min-width: 1025px) {
-    h1 {
-      font-size: 2.5rem;
+    header {
+      padding: 20px 40px;
     }
   
-    .container {
-      padding: 40px;
+    header .logo img {
+      height: 60px;
     }
   
-    main {
-      padding: 30px;
+    header nav ul li {
+      margin-left: 30px;
+    }
+  
+    header nav ul li a {
+      font-size: 1.2rem;
     }
   }
+  
